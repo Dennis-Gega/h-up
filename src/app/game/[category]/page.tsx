@@ -1,4 +1,4 @@
-import NameCard from "@/components/ui/namecard";
+import { NameCard } from "@/components/ui";
 
 export default async function Page({
     params,
