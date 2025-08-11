@@ -6,6 +6,11 @@ export default function Home() {
         <div className="flex items-center justify-center min-h-screen w-full">
             <div className="flex flex-col items-center">
                 <div className="flex flex-col flex-wrap gap-4 justify-center my-10">
+                    <div>
+                        <p>h-up by dennis</p>
+
+                        <p>select a category:</p>
+                    </div>
                     <Button asChild>
                         <Link href="/game/animals">animals</Link>
                     </Button>
