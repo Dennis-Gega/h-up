@@ -2,7 +2,13 @@
 import { useRouter } from "next/navigation";
 import { useTimer } from "react-timer-hook";
 
-export default function MyTimer({ duration = 60 }: { duration?: number }) {
+export default function MyTimer({
+    duration = 60,
+    score,
+}: {
+    duration?: number;
+    score: number;
+}) {
     const router = useRouter();
     const expiryTimestamp = new Date();
     expiryTimestamp.setSeconds(expiryTimestamp.getSeconds() + duration);
@@ -10,7 +16,7 @@ export default function MyTimer({ duration = 60 }: { duration?: number }) {
     const { seconds, minutes } = useTimer({
         expiryTimestamp,
         onExpire: () => {
-            router.push("/app/results");
+            router.push(`/results?score=${score}`);
         },
     });
 

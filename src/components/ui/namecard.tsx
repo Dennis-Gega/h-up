@@ -24,7 +24,7 @@ export default function NameCard({ data }: { data: string[] }) {
             >
                 {name}
             </Button>
-            {timerStarted && <MyTimer duration={60} />}
+            {timerStarted && <MyTimer duration={60} score={score} />}
         </div>
     );
 }
